@@ -23,5 +23,6 @@ public class Filme {
         System.out.println("Descrição: " + this.descricao);
         System.out.println("Duração do filme: " + this.duracao);
         System.out.println("Diretor: " + this.diretor.getNome());
+        System.out.println("");
     }
 }
