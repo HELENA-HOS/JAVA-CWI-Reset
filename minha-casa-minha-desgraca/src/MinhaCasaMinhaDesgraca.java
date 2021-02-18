@@ -23,13 +23,15 @@ public class MinhaCasaMinhaDesgraca {
         Endereco enderecorj = new Endereco("Rua Lapa", 67, "ap. 01", "Vila Maracanã", "Rio de Janeiro",UnidadeFederativa.RJ);
         Endereco enderecosc = new Endereco("Rua Navegantes", 80, "casa 3", "Vila Ocean", "Penha",UnidadeFederativa.SC);
         Endereco enderecopr = new Endereco("Rua Araucária", 165, "s/ compl.", "Água Verde", "Curitiba",UnidadeFederativa.PR);
+        Endereco enderecomg = new Endereco("Rua Minas", 97, "ap. 42", "Pampulha", "Belo Horizonte",UnidadeFederativa.MG);
 
 
 
-        Imovel casa01 = new Imovel(enderecosp,100000d);
-        Imovel ap01 = new Imovel(enderecorj,200000d);
-        Imovel casa02 = new Imovel(enderecosc,300000d);
-        Imovel casa03 = new Imovel(enderecopr,49000d);
+        Casa casa01 = new Casa(enderecosp, 100000d,"Casa",true);
+        Apartamento ap01 = new Apartamento(enderecorj,200000d,"Apartamento","1º");
+        Casa casa02 = new Casa(enderecosc, 300000d,"Casa",false);
+        Casa casa03 = new Casa(enderecopr,49000d,"Casa",true);
+        Apartamento ap02 = new Apartamento(enderecomg,80000d,"Apartamento","4º");
 
         //Beneficiario jose = new Beneficiario("José Souza", 5000.00);
 
@@ -37,10 +39,7 @@ public class MinhaCasaMinhaDesgraca {
         opcoesParaFinanciamento.registrarImovel(ap01);
         opcoesParaFinanciamento.registrarImovel(casa02);
         opcoesParaFinanciamento.registrarImovel(casa03);
-
-
-
-
+        opcoesParaFinanciamento.registrarImovel(ap02);
 
 
         /**

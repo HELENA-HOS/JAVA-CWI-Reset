@@ -49,13 +49,13 @@ public class PropostaFinanciamento {
     public void imprimirPropostaAprovada () {
         System.out.println("Parabéns," + beneficiario.getNome() + "!");
         System.out.println("Foi APROVADA a proposta de financiamento do imóvel escolhido:");
-        System.out.println(imovelEscolhido.apresentacao() +" para pagamento em " + mesesParaPagamento +  " meses!");
-        System.out.println("Bora arrumar essa mudança!!!");
+        System.out.println(imovelEscolhido.apresentacao() +" --> Pagamento em " + mesesParaPagamento +  " meses!");
+        System.out.println("*** Bora arrumar essa mudança!!! ***");
     }
     public void imprimirPropostaNegada () {
         System.out.println("Afff...Sem chance né," + beneficiario.getNome() + "!");
         System.out.println("Claro que foi NEGADA a proposta de financiamento do imóvel escolhido: ");
-        System.out.println(imovelEscolhido.apresentacao() +" para pagamento em " + mesesParaPagamento +  " meses!");
-        System.out.println("Vai trabalhar mais, mané!!");
+        System.out.println(imovelEscolhido.apresentacao() +" --> Pagamento em " + mesesParaPagamento +  " meses!");
+        System.out.println("*** Vai trabalhar mais, mané!! ***");
     }
 }

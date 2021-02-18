@@ -1,19 +1,23 @@
 
-public class Imovel {
+public abstract class Imovel {
     private Endereco endereco;
     private Double valor;
+    private String tipo;
+    private Apartamento andar;
+    private Casa patio;
 
-    public Imovel(Endereco endereco, Double valor) {
+    public Imovel(Endereco endereco, Double valor, String tipo) {
         this.endereco = endereco;
         this.valor = valor;
+        this.tipo = tipo;
     }
-
 
     public String apresentacao() {
-        return "Imóvel localizado no endereço " + endereco.getLogradouro() + "," +endereco.getNumero() +" - "+
-                endereco.getComplemento()+" - "+ endereco.getBairro()+" - "+endereco.getCidade()+" - " + endereco.getEstado() + ". " + "Valor: R$ " + this.valor;
+        return this.tipo + ", localizado(a) em " + endereco.getLogradouro() + "," + endereco.getNumero() + " - " +
+                endereco.getComplemento() + " - " + endereco.getBairro() + " - " + endereco.getCidade() + " - "
+                + endereco.getEstado() + ". "
+                + "\n" +" --> Valor: R$ "  + this.valor;
     }
-
 
     public Endereco getEndereco() {
         return endereco;
@@ -23,4 +27,10 @@ public class Imovel {
         return valor;
     }
 }
+
+
+
+
+
+
 
