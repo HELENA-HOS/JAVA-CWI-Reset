@@ -10,8 +10,6 @@ import br.com.banco.desgraca.exception.ValorInvalidoException;
 public class ContaPoupanca extends Conta{
     private Float taxa;
 
-    private static final Double saqueMinimo = 10d;
-
 
     public ContaPoupanca(String numeroDaConta, InstituicaoBancaria banco) {
         super(numeroDaConta, banco);

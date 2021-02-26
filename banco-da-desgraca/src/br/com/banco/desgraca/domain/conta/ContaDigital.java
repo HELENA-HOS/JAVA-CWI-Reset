@@ -12,6 +12,8 @@ public class ContaDigital extends Conta{
         validaBanco();
     }
 
+    private static final Double saqueMinimo = 10d;
+
     @Override
     public InstituicaoBancaria getInstituicaoBancaria() {
         return getBanco();
@@ -20,7 +22,7 @@ public class ContaDigital extends Conta{
     @Override
     public void sacar(Double valor) {
         super.sacar(valor);
-        if (valor < 10d) {
+        if (valor < saqueMinimo) {
             throw new ValorInvalidoException("Valor inválido para essa operação.");
         }
     }

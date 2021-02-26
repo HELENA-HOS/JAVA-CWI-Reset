@@ -90,6 +90,6 @@ public abstract class Conta implements ContaBancaria {
         for (Transacao transacao : transacoes) {
             transacao.exibirTransacoes();
         }
-        System.out.println("--> SALDO: " + DecimalFormat.getCurrencyInstance().format(saldo));
+        System.out.println("--> SALDO: " + DecimalFormat.getCurrencyInstance().format(saldo) + "\n");
     }
 }

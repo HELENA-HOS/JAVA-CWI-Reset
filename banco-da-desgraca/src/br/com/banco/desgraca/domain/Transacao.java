@@ -23,17 +23,9 @@ public class Transacao {
     }
 
 
-
-
-    public TipoTransacao getTipo() {
-        return tipo;
-    }
-
     public LocalDate getData() {
         return data;
     }
 
-    public Double getValorDaTransacao() {
-        return valorDaTransacao;
-    }
+
 }
