@@ -3,8 +3,7 @@ public abstract class Imovel {
     private Endereco endereco;
     private Double valor;
     private String tipo;
-    private Apartamento andar;
-    private Casa patio;
+
 
     public Imovel(Endereco endereco, Double valor, String tipo) {
         this.endereco = endereco;
