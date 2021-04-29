@@ -1,13 +1,13 @@
 package br.com.cwi.resetflix.mapper;
 
-import br.com.cwi.resetflix.entity.FilmeEntity;
 import br.com.cwi.resetflix.entity.SerieEntity;
-import br.com.cwi.resetflix.response.FilmeResponse;
 import br.com.cwi.resetflix.response.SerieResponse;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class SeriesResponseMapper {
 
     public List<SerieResponse> mapear(final List<SerieEntity> seriesAtor) {

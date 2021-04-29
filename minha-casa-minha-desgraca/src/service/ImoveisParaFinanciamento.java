@@ -1,3 +1,7 @@
+package service;
+
+import heranca.Imovel;
+
 import java.util.ArrayList;
 import java.util.List;
 

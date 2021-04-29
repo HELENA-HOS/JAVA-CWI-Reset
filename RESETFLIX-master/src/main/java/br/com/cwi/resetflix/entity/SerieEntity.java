@@ -22,6 +22,15 @@ public class SerieEntity {
         this.idsAtores = idsAtores;
     }
 
+    public SerieEntity(String nome, Genero genero, Integer temporada, Integer episodio, List<Long> idsAtores) {
+        this.nome = nome;
+        this.genero = genero;
+        this.temporada = temporada;
+        this.episodio = episodio;
+        this.idsAtores = idsAtores;
+    }
+
+
     public Long getId() {
         return id;
     }

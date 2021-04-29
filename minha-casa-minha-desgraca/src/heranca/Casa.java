@@ -1,3 +1,6 @@
+package heranca;
+
+import domain.Endereco;
 
 public class Casa extends Imovel {
     private boolean patio;

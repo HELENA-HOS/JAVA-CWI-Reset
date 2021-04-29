@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 import br.com.cwi.resetflix.service.FilmesService;
+import br.com.cwi.resetflix.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,10 +26,13 @@ public class FilmesController implements FilmesContract {
     @Autowired
     private FilmesService filmesService;
 
+    @Autowired
+    private UsuarioService usuarioService;
+
     @Override
     @GetMapping
     public List<FilmeResponse> getFilmes(@RequestParam(value = "genero", required = false) final Genero genero) {
-        return filmesService.getFilmes();
+        return filmesService.getFilmes(genero);
     }
 
     @Override
@@ -40,20 +44,18 @@ public class FilmesController implements FilmesContract {
     @Override
     @PostMapping
     public Long criarFilme(@RequestBody final CriarFilmeRequest request) {
-        //TODO realizar chamada
-        return null;
+        return filmesService.criarFilme(request);
     }
 
     @Override
     @GetMapping("/recomendacoes")
     public List<FilmeResponse> getRecomendacoesFilmes() {
-        //TODO realizar chamada
-        return Collections.emptyList();
+        return filmesService.obterFilmesRecomendados();
     }
 
     @Override
     @PostMapping("/{id}/assistir")
     public void assistirFilme(@PathVariable("id") final Long id) {
-        //TODO realizar chamada
+        usuarioService.assistirFilme(id);
     }
 }

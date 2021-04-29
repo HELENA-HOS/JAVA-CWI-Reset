@@ -1,3 +1,6 @@
+package heranca;
+
+import domain.Endereco;
 
 public class Apartamento extends Imovel {
     private String andar;

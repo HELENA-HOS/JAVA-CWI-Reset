@@ -5,7 +5,9 @@ import java.util.List;
 
 import br.com.cwi.resetflix.entity.AtorEntity;
 import br.com.cwi.resetflix.response.AtoresResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AtoresResponseMapper {
 
     public List<AtoresResponse> mapear(final List<AtorEntity> atores) {
@@ -13,10 +15,10 @@ public class AtoresResponseMapper {
 
         for(AtorEntity atorEntity : atores){
 
-            AtoresResponse atorResponse = new AtoresResponse(atorEntity.getId(),
+            AtoresResponse atoresResponse = new AtoresResponse(atorEntity.getId(),
                 atorEntity.getNome());
 
-            atoresResponses.add(atorResponse);
+            atoresResponses.add(atoresResponse);
         }
 
         return atoresResponses;

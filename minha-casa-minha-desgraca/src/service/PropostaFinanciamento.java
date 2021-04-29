@@ -1,3 +1,7 @@
+package service;
+
+import domain.Beneficiario;
+import heranca.Imovel;
 
 public class PropostaFinanciamento {
     private Beneficiario beneficiario;

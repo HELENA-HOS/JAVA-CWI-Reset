@@ -1,3 +1,6 @@
+package heranca;
+
+import domain.Endereco;
 
 public abstract class Imovel {
     private Endereco endereco;

@@ -5,7 +5,9 @@ import java.util.List;
 
 import br.com.cwi.resetflix.entity.FilmeEntity;
 import br.com.cwi.resetflix.response.FilmeResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FilmeResponseMapper {
 
     public List<FilmeResponse> mapear(final List<FilmeEntity> filmesAtor) {

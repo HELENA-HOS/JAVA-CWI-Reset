@@ -2,6 +2,8 @@ package br.com.cwi.resetflix.service;
 
 import java.util.List;
 
+import br.com.cwi.resetflix.exception.BadRequestException;
+import br.com.cwi.resetflix.exception.NotFoundException;
 import br.com.cwi.resetflix.response.AtoresResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,7 @@ import br.com.cwi.resetflix.repository.AtoresRepository;
 import br.com.cwi.resetflix.repository.FilmeRepository;
 import br.com.cwi.resetflix.request.CriarAtorRequest;
 import br.com.cwi.resetflix.response.ConsultarDetalhesAtorResponse;
+import org.springframework.web.client.HttpClientErrorException;
 
 @Service
 public class AtoresService {
@@ -25,23 +28,40 @@ public class AtoresService {
     @Autowired
     private FilmeRepository filmeRepository;
 
-    static AtoresResponseMapper MAPPER_RESPONSE = new AtoresResponseMapper();
-    static AtorEntityMapper MAPPER_ENTITY = new AtorEntityMapper();
-    static ConsultarDetalhesAtorResponseMapper MAPPER_DETALHES_ATOR = new ConsultarDetalhesAtorResponseMapper();
+    @Autowired
+    private AtoresResponseMapper atoresResponseMapper;
+
+    @Autowired
+    private AtorEntityMapper atorEntityMapper;
+
+    @Autowired
+    private ConsultarDetalhesAtorResponseMapper consultarDetalhesAtorResponseMapper;
+
 
     public List<AtoresResponse> getAtores() {
         final List<AtorEntity> atores = atoresRepository.getAtores();
-        return MAPPER_RESPONSE.mapear(atores);
+        return atoresResponseMapper.mapear(atores);
     }
 
     public Long criarAtor(final CriarAtorRequest request) {
-        AtorEntity atorSalvar = MAPPER_ENTITY.mapear(request);
+        if (request == null) {
+            throw new BadRequestException("Dados inválidos para cadastro de ator.");
+        }
+
+        AtorEntity atorSalvar = atorEntityMapper.mapear(request);
         return atoresRepository.criarAtor(atorSalvar);
     }
 
+
+
     public ConsultarDetalhesAtorResponse consultarDetalhesAtor(final Long id) {
         AtorEntity atorSalvo = atoresRepository.acharAtorPorId(id);
+
+        if(atorSalvo == null) {
+            throw new NotFoundException("Ator não cadastrado.");
+        }
+
         List<FilmeEntity> filmesAtor = filmeRepository.acharFilmesAtor(id);
-        return MAPPER_DETALHES_ATOR.mapear(atorSalvo, filmesAtor);
+        return consultarDetalhesAtorResponseMapper.mapear(atorSalvo, filmesAtor);
     }
 }

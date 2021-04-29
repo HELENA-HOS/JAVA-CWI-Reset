@@ -1,7 +1,5 @@
 package br.com.cwi.resetflix.repository;
 
-
-import br.com.cwi.resetflix.entity.AtorEntity;
 import br.com.cwi.resetflix.entity.DiretorEntity;
 import org.springframework.stereotype.Repository;
 

@@ -1,3 +1,12 @@
+import domain.Beneficiario;
+import domain.Endereco;
+import domain.UnidadeFederativa;
+import heranca.Apartamento;
+import heranca.Casa;
+import heranca.Imovel;
+import service.ImoveisParaFinanciamento;
+import service.PropostaFinanciamento;
+
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Random;
@@ -7,7 +16,7 @@ public class MinhaCasaMinhaDesgraca {
 
     public static void main(String[] args) throws Exception {
 
-        System.out.println("\n ### Olá, seja bem vindo ao magnífico programa Minha Casa - Minha Desgraça ###\n");
+        System.out.println("\n ### Olá, seja bem vindo ao magnífico programa Minha heranca.Casa - Minha Desgraça ###\n");
 
         ImoveisParaFinanciamento opcoesParaFinanciamento = new ImoveisParaFinanciamento();
 
@@ -19,7 +28,7 @@ public class MinhaCasaMinhaDesgraca {
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
 
-        Endereco enderecosp = new Endereco("Rua Silveira", 200, "bloco A", "Vila Maria", "São Paulo",UnidadeFederativa.SP);
+        Endereco enderecosp = new Endereco("Rua Silveira", 200, "bloco A", "Vila Maria", "São Paulo", UnidadeFederativa.SP);
         Endereco enderecorj = new Endereco("Rua Lapa", 67, "ap. 01", "Vila Maracanã", "Rio de Janeiro",UnidadeFederativa.RJ);
         Endereco enderecosc = new Endereco("Rua Navegantes", 80, "casa 3", "Vila Ocean", "Penha",UnidadeFederativa.SC);
         Endereco enderecopr = new Endereco("Rua Araucária", 165, "s/ compl.", "Água Verde", "Curitiba",UnidadeFederativa.PR);
@@ -27,13 +36,13 @@ public class MinhaCasaMinhaDesgraca {
 
 
 
-        Casa casa01 = new Casa(enderecosp, 100000d,"Casa",true);
-        Apartamento ap01 = new Apartamento(enderecorj,200000d,"Apartamento","1º");
-        Casa casa02 = new Casa(enderecosc, 300000d,"Casa",false);
-        Casa casa03 = new Casa(enderecopr,49000d,"Casa",true);
-        Apartamento ap02 = new Apartamento(enderecomg,80000d,"Apartamento","4º");
+        Casa casa01 = new Casa(enderecosp, 100000d,"heranca.Casa",true);
+        Apartamento ap01 = new Apartamento(enderecorj,200000d,"heranca.Apartamento","1º");
+        Casa casa02 = new Casa(enderecosc, 300000d,"heranca.Casa",false);
+        Casa casa03 = new Casa(enderecopr,49000d,"heranca.Casa",true);
+        Apartamento ap02 = new Apartamento(enderecomg,80000d,"heranca.Apartamento","4º");
 
-        //Beneficiario jose = new Beneficiario("José Souza", 5000.00);
+        //domain.Beneficiario jose = new domain.Beneficiario("José Souza", 5000.00);
 
         opcoesParaFinanciamento.registrarImovel(casa01);
         opcoesParaFinanciamento.registrarImovel(ap01);

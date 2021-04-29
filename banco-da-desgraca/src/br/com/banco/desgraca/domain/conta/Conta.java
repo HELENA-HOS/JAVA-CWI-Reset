@@ -87,6 +87,9 @@ public abstract class Conta implements ContaBancaria {
     @Override
     public void exibirExtrato(LocalDate inicio, LocalDate fim) {
         System.out.println("\n----- EXTRATO " + this.toString() + " -----");
+
+
+
         for (Transacao transacao : transacoes) {
             transacao.exibirTransacoes();
         }

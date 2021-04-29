@@ -28,7 +28,7 @@ public class ContaDigital extends Conta{
     }
 
     private void validaBanco() {
-        if(this.getInstituicaoBancaria() != InstituicaoBancaria.ITAU && this.getInstituicaoBancaria() != InstituicaoBancaria.NUBANK){
+        if(!this.getInstituicaoBancaria().getBanco().equals( InstituicaoBancaria.ITAU )|| !this.getInstituicaoBancaria().getBanco().equals(InstituicaoBancaria.NUBANK)){
             throw new BancoInvalidoException("Banco inválido para esse tipo de Conta Bancária");
         }
     }

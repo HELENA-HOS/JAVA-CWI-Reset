@@ -11,10 +11,13 @@ public class ContaPoupanca extends Conta{
     private Float taxa;
 
 
+
     public ContaPoupanca(String numeroDaConta, InstituicaoBancaria banco) {
         super(numeroDaConta, banco);
         validaBanco(banco);
     }
+
+
 
     @Override
     public InstituicaoBancaria getInstituicaoBancaria() {
@@ -54,4 +57,8 @@ public class ContaPoupanca extends Conta{
         setSaldo(getSaldo() - (valor * this.taxa));
         getTransacoes().add(new Transacao(TipoTransacao.TAXA,Data.getDataTransacao(), (valor * this.taxa)));
     }
+
+
+
+
 }

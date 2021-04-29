@@ -6,7 +6,9 @@ import br.com.cwi.resetflix.entity.AtorEntity;
 import br.com.cwi.resetflix.entity.FilmeEntity;
 import br.com.cwi.resetflix.response.ConsultarDetalhesAtorResponse;
 import br.com.cwi.resetflix.response.FilmeResponse;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ConsultarDetalhesAtorResponseMapper {
 
     public ConsultarDetalhesAtorResponse mapear(final AtorEntity atorSalvo, final List<FilmeEntity> filmesAtor) {

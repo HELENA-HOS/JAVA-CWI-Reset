@@ -8,9 +8,11 @@ import br.com.cwi.resetflix.response.AtoresResponse;
 import br.com.cwi.resetflix.response.ConsultarDetalhesFilmeResponse;
 import br.com.cwi.resetflix.response.ConsultarDetalhesSerieResponse;
 import br.com.cwi.resetflix.response.DiretoresResponse;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ConsultarDetalhesSeriesResponseMapper {
 
     public ConsultarDetalhesSerieResponse mapear(final SerieEntity serieSalva, List<AtorEntity> atorFilmes) {

@@ -5,9 +5,10 @@ import br.com.cwi.resetflix.entity.DiretorEntity;
 import br.com.cwi.resetflix.entity.FilmeEntity;
 import br.com.cwi.resetflix.response.ConsultarDetalhesDiretorResponse;
 import br.com.cwi.resetflix.response.FilmeResponse;
-
+import org.springframework.stereotype.Component;
 import java.util.List;
 
+@Component
 public class ConsultarDetalhesDiretorResponseMapper {
     public ConsultarDetalhesDiretorResponse mapear(final DiretorEntity diretorSalvo, final List<FilmeEntity> filmesDiretor) {
         List<FilmeResponse> filmesResponse = new FilmeResponseMapper().mapear(filmesDiretor);

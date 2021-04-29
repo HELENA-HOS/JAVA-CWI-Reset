@@ -1,3 +1,5 @@
+package domain;
+
 public class Beneficiario {
     private String nome;
     private Double salario;
