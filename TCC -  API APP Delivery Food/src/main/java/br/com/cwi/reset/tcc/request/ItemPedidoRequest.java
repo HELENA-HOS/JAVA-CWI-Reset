@@ -1,0 +1,18 @@
+package br.com.cwi.reset.tcc.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+public class ItemPedidoRequest {
+
+
+    private Long idProduto;
+
+    private Integer quantidade;
+
+
+}
