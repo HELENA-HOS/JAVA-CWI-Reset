@@ -58,7 +58,7 @@ Programa de capacitação o qual tive oportunidade de participar, após algumas 
 - Reimplementação dos repositories usando Banco de Dados
 
 ## Projetos
-- [Minha Casa Minha Desgaça](https://github.com/HELENA-HOS/JAVA-CWI-Reset/tree/main/minha-casa-minha-desgraca)
+- [Minha Casa Minha Desgraça](https://github.com/HELENA-HOS/JAVA-CWI-Reset/tree/main/minha-casa-minha-desgraca)
 - [Banco da Desgraça](https://github.com/HELENA-HOS/JAVA-CWI-Reset/tree/main/banco-da-desgraca)
 - [Resetflix](https://github.com/HELENA-HOS/JAVA-CWI-Reset/tree/main/RESETFLIX-master)
 - [TCC Delivery Food](https://github.com/HELENA-HOS/JAVA-CWI-Reset/tree/main/TCC%20-%20%20API%20APP%20Delivery%20Food)
