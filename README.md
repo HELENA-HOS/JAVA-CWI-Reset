@@ -1,7 +1,7 @@
 # CWI | Reset
 
 
-Diretório utilizado para todo o conteúdos, exercícios e projetos (inclusive TCC) desenvolvidos durante o CWI | Reset - Reprogramando Oportunidades. 
+Diretório utilizado para todo o conteúdo, exercícios e projetos (inclusive TCC) desenvolvidos durante o CWI | Reset - Reprogramando Oportunidades. 
 
 Programa de capacitação o qual tive oportunidade de participar, após algumas fases de seleção que tinha como foco profissionais já habilitados em outras carreiras e que buscam entrar no mundo da tecnologia. 
 
